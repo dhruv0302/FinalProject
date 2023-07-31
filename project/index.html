@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<!-- author: Dhruv Patel  -->
+
+<head>
+	<title>Dice Game</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8" />
+
+	<link rel="stylesheet" href="css/styles.css">
+
+
+	<script src="scripts/project.js" defer></script>
+
+
+</head>
+
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>Dice Game</h1>
+		</header>
+
+
+		<main>
+			<div id="game">
+				<article>
+
+					<div class="dice-container">
+						<div class="dice" id="player-dice-1"></div>
+						<div class="dice" id="player-dice-2"></div>
+						<div class="score">
+							<div class="score">
+								<div class="player-score">
+									<p>Player Current Score: <span id="player-current-score">0</span></p>
+									<p>Player Total Score: <span id="player-total-score">0</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dice-container">
+						<div class="dice" id="computer-dice-1"></div>
+						<div class="dice" id="computer-dice-2"></div>
+						<div class="score">
+							<div class="computer-score">
+								<p>Computer Current Score: <span id="computer-current-score">0</span></p>
+								<p>Computer Total Score: <span id="computer-total-score">0</span></p>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<button id="roll-dice-btn">Roll Dice</button>
+				<button id="reset-btn">Reset Game</button>
+			</div>
+			<section class="how-to-play">
+				<h2>How to Play</h2>
+				<p>
+					1. Click on the "Roll Dice" button to roll the dice.<br>
+					2. After three rolls, the game will total up the scores and display the winner.<br>
+					3. If you want to start a new game, click the "Reset Game" button.
+				</p>
+			</section>
+			<section class="rules">
+				<h2>Rules for the Game</h2>
+				<p>
+					- Each player rolls a pair of dice 3 times.<br>
+					- If any of the player's dice comes up as a 1, the score for that round is 0.<br>
+					- If the player rolls a pair of the same numbers, the player's score is the total of the two dice
+					times 2.<br>
+					- If the player rolls any other combination of dice, the player's score is the total value of the
+					two dice.<br>
+					- The player with the highest score after 3 rounds wins the game!
+				</p>
+			</section>
+
+
+		</main>
+
+		<div class="overlay" id="game-over-popup">
+			<div class="modal">
+				<h2>Game Over</h2>
+				<p id="winner-message"></p>
+				<p id="personal-message"></p>
+				<button id="close-popup-btn">Close</button>
+			</div>
+		</div>
+		<footer>
+			<p>The Dice Game (Final Project) - COMP2132</p>
+		</footer>
+
+</body>
+
+</html>

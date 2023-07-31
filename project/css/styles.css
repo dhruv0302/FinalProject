@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+a:hover, a:focus, a:active {
+  color: #E6CEBC;
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Varela Round", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: rgba(246, 240, 252, 0.6470588235);
+}
+
+header,
+main,
+footer,
+section,
+#wrapper {
+  padding: 5px;
+}
+
+header {
+  width: 100%;
+  padding: 20px 5px;
+  background-color: rgba(233, 219, 246, 0.65);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+main {
+  flex: 1;
+}
+
+section {
+  padding: 10px;
+  margin: 5px;
+  background-color: rgba(233, 219, 246, 0.65);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+article {
+  display: flex;
+  width: 99%;
+  padding: 5px;
+  margin: 5px;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+a {
+  word-wrap: break-word;
+  font-weight: bold;
+  color: #191211;
+}
+a a:hover, a a:focus, a a:active {
+  color: #E6CEBC;
+  text-decoration: none;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 5px;
+}
+button:hover {
+  background-color: #0062cc;
+}
+
+.dice-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+  width: 49%;
+  padding-inline: 10%;
+  margin-inline: 10px;
+  margin-bottom: 20px;
+  background-color: rgba(233, 219, 246, 0.6470588235);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dice {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #333;
+  display: inline-block;
+}
+
+.dice img {
+  width: 100%;
+  height: 100%;
+}
+
+.score {
+  margin-bottom: 20px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+}
+
+.modal h2 {
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.modal p {
+  margin-bottom: 10px;
+}
+
+.modal button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.rules,
+.how-to-play {
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.how-to-play {
+  margin-top: 10px;
+}
+
+.rules.show,
+.how-to-play.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.score {
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-score,
+.computer-score {
+  flex: 1;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#game {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#wrapper {
+  max-width: 1024px;
+  display: flex;
+  margin: 0 auto;
+  padding: 5px;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media (min-width: 550px) {
+  h1 {
+    font-size: 2em;
+  }
+  section {
+    margin: 10px;
+    width: 98%;
+  }
+}
+@media (min-width: 850px) {
+  section {
+    width: 98%;
+  }
+}
