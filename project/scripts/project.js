@@ -130,7 +130,7 @@ function closeGameOverPopup() {
   }, 4000);;
 }
 
-function showSectionsWithAnimation() {
+function showSections() {
   const rulesSection = document.querySelector('.rules');
   const howToPlaySection = document.querySelector('.how-to-play');
 
@@ -138,7 +138,7 @@ function showSectionsWithAnimation() {
   howToPlaySection.classList.add('show');
 }
 
-setTimeout(showSectionsWithAnimation, 1000);
+setTimeout(showSections, 1000);
 
 
 document.getElementById('close-popup-btn').addEventListener('click', closeGameOverPopup);
